@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dpuhl04bmnk32"]
+
+[ext_resource type="Script" uid="uid://dygpr1jq3to3x" path="res://checkpoint.gd" id="1_r6hke"]
+[ext_resource type="Texture2D" uid="uid://bs51rf6heg5ah" path="res://Dimensional_Portal.png" id="2_tnhlw"]
+[ext_resource type="AudioStream" uid="uid://cq0y3ui2m4idr" path="res://freesound_community-teleport-14639.mp3" id="3_tnhlw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ib0a4"]
+
+[node name="checkpoint" type="Area2D" unique_id=1590249338]
+script = ExtResource("1_r6hke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=707940845]
+position = Vector2(83.5, 37.749992)
+shape = SubResource("CircleShape2D_ib0a4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=296285798]
+position = Vector2(83.5, 37.75)
+scale = Vector2(1.5500001, 0.60937494)
+texture = ExtResource("2_tnhlw")
+
+[node name="tele" type="AudioStreamPlayer2D" parent="." unique_id=901982411]
+stream = ExtResource("3_tnhlw")
